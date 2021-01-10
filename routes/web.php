@@ -11,6 +11,9 @@
 |
 */
 
+Route::view('/admin', 'admin.dashboard.index');
+
+
 Route::get('/', function () {
     return view('welcome');
 });
