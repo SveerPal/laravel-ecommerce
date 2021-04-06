@@ -10,8 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::view('/admin', 'admin.dashboard.index');
+require 'admin.php';
 
 
 Route::get('/', function () {
