@@ -10,9 +10,16 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::view('/', 'site.pages.homepage');
+
+
+Auth::routes();
 require 'admin.php';
 
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+
+

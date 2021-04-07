@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -14,10 +14,13 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
+    /*protected $fillable = [
         'name', 'email', 'password',
-    ];
+    ];*/
 
+    protected $fillable = [
+        'first_name', 'last_name', 'email', 'password', 'address', 'city', 'country'
+    ];
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -26,4 +29,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    public function getFullNameAttribute()
+    {
+        return $this->first_name. ' '. $this->last_name;
+    }
 }
