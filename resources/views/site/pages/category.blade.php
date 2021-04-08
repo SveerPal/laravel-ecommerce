@@ -13,11 +13,15 @@
                 @forelse($category->products as $product)
                     <div class="col-md-4">
                         <figure class="card card-product">
-                            {{-- @if ($product->images->count() > 0)
-                                <div class="img-wrap padding-y"><img src="{{ asset('storage/'.$product->images->first()->full) }}" alt=""></div>
-                            @else --}}
+                            @if($product->images!="")
+                                @if (count($product->images) > 0)
+                                    <div class="img-wrap padding-y"><img src="{{ asset('storage/'.$product->images->first()->full) }}" alt=""></div>
+                                @else
+                                    <div class="img-wrap padding-y"><img src="https://via.placeholder.com/176" alt=""></div>
+                                @endif 
+                            @else
                                 <div class="img-wrap padding-y"><img src="https://via.placeholder.com/176" alt=""></div>
-                           {{--  @endif --}}
+                            @endif    
                             <figcaption class="info-wrap">
                                 <h4 class="title"><a href="{{ route('product.show', $product->slug) }}">{{ $product->name }}</a></h4>
                             </figcaption>
