@@ -30,7 +30,8 @@ class CategoryController extends BaseController
      */
     public function index()
     {
-        $categories = $this->categoryRepository->listCategories();
+         $categories = $this->categoryRepository->listCategories();
+        //$categories = $this->categoryRepository->treeList();
 
         $this->setPageTitle('Categories', 'List of all categories');
         return view('admin.categories.index', compact('categories'));
@@ -42,6 +43,7 @@ class CategoryController extends BaseController
     public function create()
     {
         $categories = $this->categoryRepository->treeList();
+
 
         $this->setPageTitle('Categories', 'Create Category');
         return view('admin.categories.create', compact('categories'));

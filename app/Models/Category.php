@@ -1,7 +1,7 @@
 <?php
 namespace App\Models;
 
-//use App\Models\Product;
+use App\Models\Product;
 use TypiCMS\NestableTrait;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
