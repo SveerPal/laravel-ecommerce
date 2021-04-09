@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '1ddfddb75a82e9d380bfbaf48dffb02ce0b2345a',
+    'reference' => 'fcae92eae8b1b18d092abbfd5714738ff8cce7cd',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -17,6 +17,15 @@
       array (
         0 => '*',
       ),
+    ),
+    'darryldecode/cart' => 
+    array (
+      'pretty_version' => '4.2.1',
+      'version' => '4.2.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2ad23e070af341da80300ef990b1fb529af88893',
     ),
     'davedevelopment/hamcrest-php' => 
     array (
@@ -370,7 +379,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '1ddfddb75a82e9d380bfbaf48dffb02ce0b2345a',
+      'reference' => 'fcae92eae8b1b18d092abbfd5714738ff8cce7cd',
     ),
     'laravel/tinker' => 
     array (
